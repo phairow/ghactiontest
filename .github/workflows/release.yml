@@ -16,4 +16,4 @@ jobs:
       - name: Print version environment variable
         run: echo ${RELEASE_VERSION} && sh -c "echo ${RELEASE_VERSION}"
       - name: Run make check-version
-        run: make
+        run: make check-version
