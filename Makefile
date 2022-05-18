@@ -12,4 +12,4 @@ else
 endif
 
 get-version:
-	@echo "$(echo ${GITHUB_REF#refs/*/} | sed -e 's/^v//' 2>&1)"
+	@echo $(strip $(shell @echo $(echo ${GITHUB_REF#refs/*/} | sed -e 's/^v//' 2>&1)))
