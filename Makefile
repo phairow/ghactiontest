@@ -2,7 +2,7 @@
 # General commands to instrument Paper Route
 ###
 
-.PHONY: check-version get-version
+.PHONY: check-version
 
 check-version:
 ifndef RELEASE_VERSION
@@ -11,6 +11,3 @@ else
 	@echo "Release Version is ::> ${RELEASE_VERSION}"
 endif
 
-get-version:
-	@echo ${GITHUB_REF#refs/*/}
-	
