@@ -3,8 +3,9 @@ name: Production Release
 
 # Action activates on tag push
 on: 
-  tags:
-    - "v*"
+  push:
+    tags:
+      - "v*"
 
 # Setup the Job
 jobs:
