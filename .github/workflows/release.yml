@@ -12,6 +12,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Set version environment variable
-        run: echo "{RELEASE_VERSION}=${GITHUB_REF/refs\/tags\//}" >> $GITHUB_ENV
+        run: echo "RELEASE_VERSION=${GITHUB_REF/refs\/tags\//}" >> $GITHUB_ENV
       - name: Print version environment variable
         run: echo ${RELEASE_VERSION}
