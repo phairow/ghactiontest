@@ -10,6 +10,3 @@ ifndef RELEASE_VERSION
 else
 	@echo "Release Version is ::> ${RELEASE_VERSION}"
 endif
-
-get-version:
-	@echo $(strip $(shell git for-each-ref --sort=-creatordate --count=1 --format '%(refname:short)' refs/tags | sed -e 's/^v//'))
