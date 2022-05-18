@@ -10,3 +10,6 @@ ifndef RELEASE_VERSION
 else
 	@echo "Release Version is ::> ${RELEASE_VERSION}"
 endif
+
+get-version:
+	@echo $(echo ${GITHUB_REF#refs/*/} | sed -e 's/^v//' 2>&1)
