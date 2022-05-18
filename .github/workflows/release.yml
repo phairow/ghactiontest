@@ -12,7 +12,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Set version environment variable
-        run: echo "RELEASE_VERSION=$(make get-version)" >> $GITHUB_ENV
+        run:
+        make get-version
+        echo "RELEASE_VERSION=$(make get-version 2>&1)" >> $GITHUB_ENV
       - name: Print version environment variable
         run: echo ${RELEASE_VERSION} && sh -c "echo ${RELEASE_VERSION}"
       - name: checkout repo
