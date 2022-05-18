@@ -2,8 +2,6 @@
 # General commands to instrument Paper Route
 ###
 
-RELEASE_VERSION ?= 0.1
-
 .PHONY: check-version get-version
 
 check-version:
