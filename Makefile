@@ -10,7 +10,3 @@ ifndef RELEASE_VERSION
 else
 	@echo "Release Version is ::> ${RELEASE_VERSION}"
 endif
-
-get-version:
-	@echo ${GITHUB_REF#refs/*/}
-	
